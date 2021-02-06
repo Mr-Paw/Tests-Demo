@@ -28,7 +28,7 @@ class Tests_DemoUITests: XCTestCase {
         app.launch()
         let email = "test@test.test"
         let password = "testTEST123"
-        XCTAssert(Validater.validateEmail(email) && Validater.validatePassword(password) == true)
+        XCTAssert((Validater.validateEmail(email) && Validater.validatePassword(password)) == true)
         let emailTF = app.textFields["Enter email"]
         emailTF.tap()
         emailTF.typeText(email)
@@ -47,7 +47,7 @@ class Tests_DemoUITests: XCTestCase {
         app.launch()
         let email = "test@test"
         let password = "testTEST123"
-        XCTAssert(Validater.validateEmail(email) && Validater.validatePassword(password) == false)
+        XCTAssert((Validater.validateEmail(email) && Validater.validatePassword(password)) == false)
         let emailTF = app.textFields["Enter email"]
         emailTF.tap()
         emailTF.typeText(email)
@@ -64,7 +64,7 @@ class Tests_DemoUITests: XCTestCase {
         app.launch()
         let email = "test@test.test"
         let password = "test"
-        XCTAssert(Validater.validateEmail(email) && Validater.validatePassword(password) == false)
+        XCTAssert((Validater.validateEmail(email) && Validater.validatePassword(password)) == false)
         let emailTF = app.textFields["Enter email"]
         emailTF.tap()
         emailTF.typeText(email)
