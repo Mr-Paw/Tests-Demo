@@ -15,6 +15,9 @@
 		57B27E0125CF0997002D6630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B27DFF25CF0997002D6630 /* LaunchScreen.storyboard */; };
 		57B27E0C25CF0997002D6630 /* Tests_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B27E0B25CF0997002D6630 /* Tests_DemoTests.swift */; };
 		57B27E1725CF0997002D6630 /* Tests_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B27E1625CF0997002D6630 /* Tests_DemoUITests.swift */; };
+		57B27E2825CF0A06002D6630 /* Validater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B27E2725CF0A06002D6630 /* Validater.swift */; };
+		57B27E2925CF0A06002D6630 /* Validater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B27E2725CF0A06002D6630 /* Validater.swift */; };
+		57B27E2A25CF0A06002D6630 /* Validater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B27E2725CF0A06002D6630 /* Validater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		57B27E1225CF0997002D6630 /* Tests DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B27E1625CF0997002D6630 /* Tests_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_DemoUITests.swift; sourceTree = "<group>"; };
 		57B27E1825CF0997002D6630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57B27E2725CF0A06002D6630 /* Validater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				57B27DF425CF0996002D6630 /* AppDelegate.swift */,
 				57B27DF625CF0996002D6630 /* SceneDelegate.swift */,
 				57B27DF825CF0996002D6630 /* ViewController.swift */,
+				57B27E2725CF0A06002D6630 /* Validater.swift */,
 				57B27DFA25CF0996002D6630 /* Main.storyboard */,
 				57B27DFD25CF0997002D6630 /* Assets.xcassets */,
 				57B27DFF25CF0997002D6630 /* LaunchScreen.storyboard */,
@@ -260,6 +265,7 @@
 			files = (
 				57B27DF925CF0996002D6630 /* ViewController.swift in Sources */,
 				57B27DF525CF0996002D6630 /* AppDelegate.swift in Sources */,
+				57B27E2825CF0A06002D6630 /* Validater.swift in Sources */,
 				57B27DF725CF0996002D6630 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B27E2925CF0A06002D6630 /* Validater.swift in Sources */,
 				57B27E0C25CF0997002D6630 /* Tests_DemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B27E2A25CF0A06002D6630 /* Validater.swift in Sources */,
 				57B27E1725CF0997002D6630 /* Tests_DemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +446,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Tests Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +465,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Tests Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,25 +9,33 @@ import XCTest
 @testable import Tests_Demo
 
 class Tests_DemoTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
+    func testPasswords() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(Validater.validatePassword("") == false)
+        XCTAssert(Validater.validatePassword("ksjhksG") == false)
+        XCTAssert(Validater.validatePassword(";;;;;;") == false)
+        XCTAssert(Validater.validatePassword("asd2V") == false)
+        XCTAssert(Validater.validatePassword("QwErTyU123") == true)
+        XCTAssert(Validater.validatePassword("123456789qwerty") == false)
+        XCTAssert(Validater.validatePassword("123QWERTy") == true)
+        XCTAssert(Validater.validatePassword("coolMan123") == true)
+
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    func testEmails() throws{
+        XCTAssert(Validater.validateEmail("sdf") == false)
+        XCTAssert(Validater.validateEmail("cool@man.com") == true)
+        XCTAssert(Validater.validateEmail("dddddd.com") == false)
+        XCTAssert(Validater.validateEmail("errored@errored") == false)
+        XCTAssert(Validater.validateEmail("dog@cat.com") == true)
+        XCTAssert(Validater.validateEmail("gIg.ru@gIg") == false)
+        XCTAssert(Validater.validateEmail("sdf@gmail.com") == true)
+        XCTAssert(Validater.validateEmail("swifter@swift.swift") == true)
+        XCTAssert(Validater.validateEmail("sdf$sdf,com") == false)
 
+    }
+    
+    
+   
 }
