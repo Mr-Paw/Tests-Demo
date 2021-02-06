@@ -22,23 +22,56 @@ class Tests_DemoUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testExample1() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-       
-                
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let email = "test@test.test"
+        let password = "testTEST123"
+        XCTAssert(Validater.validateEmail(email) && Validater.validatePassword(password) == true)
+        let emailTF = app.textFields["Enter email"]
+        emailTF.tap()
+        emailTF.typeText(email)
+        app.secureTextFields["Enter password"].tap()
+        let enterPasswordSecureTextField = app.secureTextFields["Enter password"]
+        enterPasswordSecureTextField.typeText(password)
+        app.buttons["Login"].tap()
+    }
+    
+    
+    
+    
+    func testExample2() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        let email = "test@test"
+        let password = "testTEST123"
+        XCTAssert(Validater.validateEmail(email) && Validater.validatePassword(password) == false)
+        let emailTF = app.textFields["Enter email"]
+        emailTF.tap()
+        emailTF.typeText(email)
+        app.secureTextFields["Enter password"].tap()
+        let enterPasswordSecureTextField = app.secureTextFields["Enter password"]
+        enterPasswordSecureTextField.typeText(password)
+        app.buttons["Login"].tap()
+    }
+    
+    
+    func testExample3() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        let email = "test@test.test"
+        let password = "test"
+        XCTAssert(Validater.validateEmail(email) && Validater.validatePassword(password) == false)
+        let emailTF = app.textFields["Enter email"]
+        emailTF.tap()
+        emailTF.typeText(email)
+        app.secureTextFields["Enter password"].tap()
+        let enterPasswordSecureTextField = app.secureTextFields["Enter password"]
+        enterPasswordSecureTextField.typeText(password)
+        app.buttons["Login"].tap()
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-                
-            }
-        }
-    }
 }
