@@ -55,10 +55,10 @@ app:
   envs:
   - opts:
       is_expand: false
-    BITRISE_PROJECT_PATH: Tests Demo.xcodeproj
+    BITRISE_PROJECT_PATH: Tests_Demo.xcodeproj
   - opts:
       is_expand: false
-    BITRISE_SCHEME: Tests Demo
+    BITRISE_SCHEME: Tests_Demo
   - opts:
       is_expand: false
     BITRISE_EXPORT_METHOD: development
