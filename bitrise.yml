@@ -45,7 +45,7 @@ workflows:
         - project_path: $BITRISE_PROJECT_PATH
     - xcode-test@2:
         inputs:
-        - project_path: Tests\ Demo.xcodeproj
+        - project_path: Tests Demo.xcodeproj
         - export_uitest_artifacts: 'true'
         - scheme: Tests Demo
         is_always_run: true
@@ -55,7 +55,7 @@ app:
   envs:
   - opts:
       is_expand: false
-    BITRISE_PROJECT_PATH: Tests_Demo.xcodeproj
+    BITRISE_PROJECT_PATH: Tests Demo.xcodeproj
   - opts:
       is_expand: false
     BITRISE_SCHEME: Tests_Demo
