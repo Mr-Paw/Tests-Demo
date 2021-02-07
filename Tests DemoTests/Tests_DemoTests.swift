@@ -31,7 +31,7 @@ class Tests_DemoTests: XCTestCase {
         XCTAssert(Validater.validateEmail("dog@cat.com") == true)
         XCTAssert(Validater.validateEmail("gIg.ru@gIg") == false)
         XCTAssert(Validater.validateEmail("sdf@gmail.com") == true)
-        XCTAssert(Validater.validateEmail("swifter@swift.swift") == true)
+        XCTAssert(Validater.validateEmail("swifter@swift.swift") == false)
         XCTAssert(Validater.validateEmail("sdf$sdf,com") == false)
 
     }
