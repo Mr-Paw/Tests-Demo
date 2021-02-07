@@ -9,19 +9,8 @@ import Foundation
 
 public class Validater{
     public static func validateEmail(_ email: String) -> Bool{
-        var array = email.split(separator: "@")
-        var haveSpecialSym = false
-
-        if let lastEl = array.last, array.count != 1{
-            array.remove(at: 1)
-            for i in lastEl.split(separator: "."){
-                array.append(i)
-            }
-            return array.count == 3
-        }else{
-            return false
-        }
-        
+        let predicate = NSPredicate(format:"SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")
+        return predicate.evaluate(with: email)
     }
     public static func validatePassword(_ password: String) -> Bool{
         let predicate = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{6,}$")
